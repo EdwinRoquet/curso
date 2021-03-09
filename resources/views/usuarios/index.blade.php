@@ -40,6 +40,7 @@
                   <tr>
                     <th style="width: 10px">#</th>
                     <th>Nombre</th>
+                    <th>Slug</th>
                     <th>Correo</th>
                     <th>Rol</th>
                     <th style="width: 40px">Acciones</th>
@@ -51,6 +52,7 @@
 
                         <td>{{$key + 1}}</td>
                             <td>{{$usuario->name}}</td>
+                            <td>{{$usuario->slug}}</td>
                             <td>{{$usuario->email}}</td>
                             <td>@foreach($usuario->roles as $role)
                                    {{ $role->description}}
@@ -63,7 +65,7 @@
                                      <i class="fas fa-pencil-alt"></i>
                                  </button> --}}
 
-                                <form action="{{route('usuario.destroy', $usuario->id ) }}" method="POST">
+                                <form action="{{route('usuario.destroy', $usuario->slug ) }}" method="POST">
                                   @csrf
                                   @method('DELETE')
                                   <button class="btn btn-danger  text-white" type="submit"><i class="fas fa-trash-alt"></i></button>
@@ -201,7 +203,6 @@
       </div>
     </div>
   </div>
-
 
 
 @endsection

@@ -46,15 +46,19 @@ class CursoController extends Controller
           //obtener la ruta de la imagen
           $ruta_imagen = $request['imagen']->store('img-cursos', 'public');
           //Resize de la imagen
-          $img = Image::make( public_path("storage/${ruta_imagen}"))->fit(1000,500);
-
-
+          $img = Image::make( public_path("storage/${ruta_imagen}"))->fit(1000,1000);
           $img->save();
+
+          $ruta_temario = $request['imagen2']->store('img-temarios', 'public');
+          //Resize de la imagen
+          $img2 = Image::make( public_path("storage/${ruta_temario}"))->fit(1000,1000);
+          $img2->save();
 
         Curso::create([
             'nombre'     => $data['nombre'],
             'temario'    => $request->input('temario'),
             'ruta_imagen'=> $ruta_imagen,
+            'img_tem'=> $ruta_temario,
             'descripcion'=> $data['descripcion'],
         ]);
 
@@ -115,10 +119,24 @@ class CursoController extends Controller
             //obtener la ruta de la imagen
             $ruta_imagen = $request['imagen']->store('img-cursos', 'public');
             //Resize de la imagen
-            $img = Image::make( public_path("storage/${ruta_imagen}"))->fit(1000,500);
+            $img = Image::make( public_path("storage/${ruta_imagen}"))->fit(1000,1000);
             $img->save();
             //Asignar al objeto
             $curso->ruta_imagen = $ruta_imagen;
+        }
+         if(request('imagen2')){
+
+             // Elimina imagen del servidor
+             File::delete('storage/' . $imagen);
+
+
+          $ruta_temario = $request['imagen2']->store('img-temarios', 'public');
+          //Resize de la imagen
+          $img2 = Image::make( public_path("storage/${ruta_temario}"))->fit(1000,1000);
+          $img2->save();
+
+            //Asignar al objeto
+            $curso->img_tem = $ruta_temario;
         }
 
 
@@ -147,6 +165,14 @@ class CursoController extends Controller
             // Elimina imagen del servidor
             File::delete('storage/' . $imagen);
         }
+
+        $imagen = $curso->img_tem;
+        if(File::exists('storage/' . $imagen)) {
+            // Elimina imagen del servidor
+            File::delete('storage/' . $imagen);
+        }
+
+
         $curso->delete();
         return redirect()->action([CursoController::class, 'index'])->with('mensaje','Se eliminado con exito');
     }

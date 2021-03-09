@@ -6,5 +6,6 @@ require('./pregunta');
 require('./enviardatos');
 require('./moduloexamen.js');
 require('./bntEstadoExam');
+require('lightbox2');
 
 

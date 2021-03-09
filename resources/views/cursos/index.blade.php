@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 @section('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.3/trix.css" integrity="sha256-scOSmTNhvwKJmV7JQCuR7e6SQ3U9PcJ5rM/OMgL78X8=" crossorigin="anonymous" />
-@endsection
+    <link rel="stylesheet" href="{{ asset('css\lightbox.css')}}">
+ @endsection
 
 @section('content')
 <div class="content-wrapper">
@@ -44,7 +45,8 @@
                     <th style="width: 10px">#</th>
                     <th>Nombre</th>
                     <th>Descripcion</th>
-                    <th>Imagens</th>
+                    <th>Imagen del curso</th>
+                    <th>Imagen del temario</th>
                     <th style="width: 40px">Acciones</th>
                   </tr>
                 </thead>
@@ -57,7 +59,16 @@
                             <td>{{$curso->descripcion}}</td>
                             {{-- <td>{!!$curso->temario!!}</td> --}}
                             <td>
-                                <img class="img-thumbnail"  src="storage/{{$curso->ruta_imagen}}" width="100px" alt="">
+
+                                <a href="storage/{{$curso->ruta_imagen}}" data-lightbox="image-1" data-title="Curso:{{$curso->nombre}}">
+                                    <img class="img-thumbnail"  src="storage/{{$curso->ruta_imagen}}" width="100px" alt="">
+                                </a>
+                            </td>
+                            <td>
+
+                                <a href="storage/{{$curso->img_tem}}" data-lightbox="image-1" data-title="Temario:{{$curso->nombre}}">
+                                    <img class="img-thumbnail"  src="storage/{{$curso->img_tem}}" width="100px" alt="">
+                                </a>
                             </td>
 
                         </td>

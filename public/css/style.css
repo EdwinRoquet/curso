@@ -1,4 +1,4 @@
-/*--A Design by W3layouts 
+/*--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -125,9 +125,9 @@ body{
     font-weight: 600;
 }
 .navbar-brand {
-   height: auto; 
-    padding: 0; 
-    font-size: 18px; 
+   height: auto;
+    padding: 0;
+    font-size: 18px;
     line-height: 20px;
 }
 .navbar-nav {
@@ -263,7 +263,7 @@ ul.dropdown-menu {
 }
 .more-button {
     margin: 7em 0 1em 0;
-}	
+}
 .more-button a:hover{
     background: #FF5722;
 	border: solid 2px #FF5722;
@@ -504,7 +504,7 @@ ul.social-slide li i.mac{
     background: #FFFFFF;
 	height: 12px;
     width: 12px;
-}	
+}
 ul.callbacks_tabs.callbacks2_tabs {
     top: 73%;
     left: 46%;
@@ -541,7 +541,7 @@ ul.callbacks_tabs.callbacks2_tabs a:after {
     line-height: 1.8em;
 }
 /*-- //modal --*/
-/*-- services --*/ 
+/*-- services --*/
 h3.agileits-title, h2.agileits-title {
     font-size: 3em;
     margin: 0;
@@ -575,7 +575,7 @@ h3.agileits-title, h2.agileits-title {
 	-moz-transition: .5s all;
 	-o-transition: .5s all;
 	-ms-transition: .5s all;
-    transition: .5s all; 
+    transition: .5s all;
 }
 .w3ls-services-img {
     width: 75px;
@@ -611,18 +611,18 @@ h3.agileits-title, h2.agileits-title {
     letter-spacing: 2px;
 }
 .w3l-services-grid:hover .w3ls-services-img{
-    background: #FF5722;  
+    background: #FF5722;
 }
 .w3l-services-grid:hover .w3ls-services-img i.fa {
-    color: #fff; 
+    color: #fff;
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
 	-o-transform: scale(0.5);
 	-ms-transform: scale(0.5);
     transform: scale(0.5);
-} 
-.w3l-services-grid:hover .w3l-services-text:before { 
-    width: 100%;  
+}
+.w3l-services-grid:hover .w3l-services-text:before {
+    width: 100%;
 }
 .services {
     padding: 5em 0;
@@ -631,7 +631,7 @@ h3.agileits-title, h2.agileits-title {
     margin-top: 4em;
 }
 /*-- //services --*/
-/*-- stats --*/  
+/*-- stats --*/
 .stats.services {
     background: url(../images/skillsbg.jpg)no-repeat center;
     background-size: cover;
@@ -645,7 +645,7 @@ h3.agileits-title, h2.agileits-title {
 .stats-img i.fa {
     font-size: 2.5em;
     color: #d2d2d2;
-} 
+}
 .stats-agileinfo h6 {
     font-size: 1.5em;
     margin: 1.3em 0 0.8em;
@@ -688,11 +688,11 @@ h3.agileits-title, h2.agileits-title {
     width: 19%;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
-    transition: all 0.5s; 
+    transition: all 0.5s;
 	border: 2px solid transparent;
 	border-radius:50%;
 }
-.resp-tab-item img { 
+.resp-tab-item img {
 	width:100%;
 	opacity:.3;
 }
@@ -703,7 +703,7 @@ h3.agileits-title, h2.agileits-title {
 .resp-tab-active{
 	text-shadow: none;
 	color:#fff;
-} 
+}
 li.resp-tab-item.resp-tab-active {
     border-color: #ff5722;
     opacity: 1;
@@ -775,7 +775,7 @@ h2.resp-accordion {
     padding: 5em 0;
 }
 /*-- //testimonial --*/
-/*-- welcome --*/  
+/*-- welcome --*/
 .welcome {
     padding: 5em 0;
 }
@@ -805,7 +805,7 @@ P {
     text-align: center;
     margin-top: 3em;
     padding: 1em;
-    border: 1px solid #fff; 
+    border: 1px solid #fff;
 	-webkit-transition:.5s all;
 	-moz-transition:.5s all;
 	-o-transition:.5s all;
@@ -824,7 +824,7 @@ P {
 	-o-transition:.5s all;
 	-ms-transition:.5s all;
 	transition:.5s all;
-} 
+}
 .w3l-welcome-grid:hover {
     border-color: #ccc;
 }
@@ -836,7 +836,7 @@ P {
 .sub{
 	color:#fff;
 }
-.subscribe { 
+.subscribe {
 	background: #333;
 	text-align:center;
 	background: url(../images/mid-banner.jpg)no-repeat center bottom fixed;
@@ -862,7 +862,7 @@ P {
     color: #000;
     letter-spacing: 2px;
 }
-.subscribe form input[type="submit"] { 
+.subscribe form input[type="submit"] {
     font-size: 1em;
     text-transform: uppercase;
     padding: .8em 2em;
@@ -881,8 +881,8 @@ P {
 .subscribe form input[type="submit"]:hover {
 	background: transparent;
     border: 1px solid #fff;
-} 
-/*-- //subscribe --*/ 
+}
+/*-- //subscribe --*/
 /*-- footer --*/
 .agileits-w3layouts-footer{
     background: #313131;
@@ -1042,7 +1042,7 @@ P {
     text-decoration: none;
 }
 .copyright p a:hover{
-	color:#FFFFFF;	
+	color:#FFFFFF;
 }
 /*-- //footer --*/
 /*-- about --*/
@@ -1269,7 +1269,7 @@ P {
     -ms-transition: 0.5s all;
     -moz-transition: 0.5s all;
     cursor: pointer;
-} 
+}
 .icon-box:hover {
     background: #000;
 	transition:0.5s all;
@@ -1288,11 +1288,11 @@ P {
     float: left;
     width: 12.5%;
     height: 115px;
-    padding: 10px; 
+    padding: 10px;
     line-height: 1.4;
-    text-align: center;  
+    text-align: center;
     font-size: 12px;
-    list-style-type: none;	
+    list-style-type: none;
 }
 .codes .bs-glyphicons .glyphicon {
     margin-top: 5px;
@@ -1310,7 +1310,7 @@ P {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	color: #777;
-} 
+}
 .codes .bs-glyphicons .glyphicon-class {
     display: block;
     text-align: center;
@@ -1367,7 +1367,7 @@ h3.agileits-icons-title {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	color: #777;
-} 
+}
 .bs-glyphicons .glyphicon-class {
     display: block;
     text-align: center;
@@ -1473,7 +1473,7 @@ li.list-group-item1 {
 .label {
 	font-weight: 300 !important;
 	border-radius:4px;
-}  
+}
 .grid_5{
 	background:none;
 	padding:2em 0;
@@ -1681,11 +1681,11 @@ table.table.table-striped,.table-bordered,.bs-docs-example {
 }
 ul.bs-glyphicons-list {
     padding: 0;
-} 
-/*-- contact --*/ 
+}
+/*-- contact --*/
 .contact.agileits {
     padding: 5em 0;
-} 
+}
 .contact input[type="text"],.contact input[type="email"]{
     width: 47.7%;
     color: #999;
@@ -1721,9 +1721,9 @@ ul.bs-glyphicons-list {
     font-size: 1em;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #FF5722; 
+    background: #FF5722;
     border: 2px solid #FF5722;
-    -webkit-transition: 0.5s all; 
+    -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
 	transition: 0.5s all;
 }
@@ -1740,33 +1740,33 @@ ul.bs-glyphicons-list {
 .contact::-moz-placeholder {  /* Firefox 19+ */
 	color:#999 !important;
 }
-.contact:-ms-input-placeholder {  
+.contact:-ms-input-placeholder {
 	color:#999 !important;
 }
 .contact-right h4 {
     font-size: 1.8em;
     color: #FF5722;
     line-height: 1.6em;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
 }
 .contact-text {
-    padding: 3em; 
+    padding: 3em;
     -webkit-box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.5);
     box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
-} 
-.contact-text p {  
+}
+.contact-text p {
     margin-top: 1em;
     text-align: left;
 }
-.contact-text p a{  
-    color:#FF5722; 
-	-webkit-transition: 0.5s all; 
+.contact-text p a{
+    color:#FF5722;
+	-webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
 	transition: 0.5s all;
 }
-.contact-text p a:hover{  
-    color:#999; 
+.contact-text p a:hover{
+    color:#999;
 }
 .contact-text p i.fa {
     margin-right: 5px;
@@ -1915,7 +1915,7 @@ figure.effect-apollo:hover p {
 	bottom: 20px;
 	right: 2%;
 	overflow: hidden;
-	z-index: 999; 
+	z-index: 999;
 	width: 40px;
 	height: 40px;
 	border: none;

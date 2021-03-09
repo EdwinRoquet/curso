@@ -16,14 +16,14 @@
 </head>
 <style>
 #the-canvas {
-  border: 1px solid black;
+  border: 1px solid rgb(245, 238, 238);
   direction: ltr;
   width: 400px;
   height: 500px;
   align-content: center
 }
 #the-canvasdos {
-  border: 1px solid black;
+  border: 1px solid rgb(245, 238, 238);
   direction: ltr;
   width: 500px;
   height: 400px;
@@ -45,11 +45,11 @@
         <span class="brand-text font-weight-light">CASEIPA</span>
       </a>
 
-      <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      {{-- <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> --}}
 
-      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+      <div class=" navbar order-3" id="navbarCollapse">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -85,13 +85,14 @@
           <div class="col-lg-12">
 
             <div class="card card-primary card-outline">
-                <h5 class="card-title text-center mt-2">{{$constancia->usuario->name}}</h5>
+                <h5 class="ml-3 mt-2">Nombre: {{$constancia->usuario->name}}</h5>
+                <h5 class="ml-3 mt-2"> Folio: {{$constancia->folio}}</h5>
               <div class="card-body">
 
 
 
                 <div class="row">
-                    <div class="col-md-6 d-flex flex-column  align-items-center ">
+                    <div class="col-md-6 col-12 d-flex flex-column  align-items-center ">
                         @if($constancia->ruta_dc3)
                         <h4 class=" text-center mt-2">Constancia</h4>
                         <canvas id="the-canvas" ></canvas>
@@ -109,7 +110,7 @@
                              No hay constancia
                         @endif
                     </div>
-                    <div class="col-md-6 d-flex flex-column align-items-center">
+                    <div class="col-md-6 col-12 d-flex flex-column align-items-center">
                         @if($constancia->ruta_diploma)
                         <h4 class=" text-center mt-2">Diploma</h4>
                         <canvas id="the-canvasdos" ></canvas>

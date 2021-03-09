@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exam;
 use App\Models\User;
 use App\Models\Curso;
 use App\Models\Archivo;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use App\Models\Exam;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class ArchivoController extends Controller
@@ -35,6 +36,7 @@ class ArchivoController extends Controller
      */
     public function store(Request $request)
     {
+
     //   dd($request);
     $data = $request->validate([
         'uuid'    => 'required',
@@ -44,13 +46,23 @@ class ArchivoController extends Controller
         // 'dc3' => 'required',
         // 'qr' => 'required',
     ]);
+    $user = User::findOrFail($data['usuario']);
+    //  return $user;
+    $nombreImgaen = $user->slug.'.png';
+    $slug = $user->slug;
 
-    $nombreImgaen = $data['uuid'].'.png';
+    QrCode::format('png')->size(200)->generate("http://127.0.0.1:8000/constancia/user/$slug", 'storage/qrcodes/'.$nombreImgaen);
+        $valorAleatorio = uniqid();
 
-    QrCode::format('png')->generate('Make me into a QrCode!', 'storage/qrcodes/'.$nombreImgaen);
+
+
+
+    $folio = Str::of('caseipa')->slug("-")->limit(255 - mb_strlen($valorAleatorio) - 1, "")->trim("-")->append("-", $valorAleatorio);
 
     Archivo::create([
+        'folio'    =>  $folio,
         'uuid'    =>  $data['uuid'],
+        'slug'    =>  $slug,
         'user_id' =>  $data['usuario'],
         'curso_id'   =>  $data['curso'],
         'ruta_qr' => $nombreImgaen,

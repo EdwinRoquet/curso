@@ -37,4 +37,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    // Auth::user()->hasRole('admin')
+    public function authenticated($request , $user){
+        if($user->hasRole('admin')){
+            return redirect()->route('home') ;
+        }else{
+            return redirect()->route('mi-curso.index') ;
+        }
+    }
 }

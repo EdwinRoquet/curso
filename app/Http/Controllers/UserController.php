@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Role;
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -46,7 +47,11 @@ class UserController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
           ]);
 
+          $valorAleatorio = uniqid();
+          $slug = Str::of($data['name'])->slug("-")->limit(255 - mb_strlen($valorAleatorio) - 1, "")->trim("-")->append("-", $valorAleatorio);
+
           $user = User::create([
+              'slug' =>  $slug ,
               'name' => $data['name'],
               'email' => $data['email'],
               'password' => Hash::make($data['password']),
@@ -54,7 +59,7 @@ class UserController extends Controller
 
           $user->roles()->attach(Role::where('name', $data['rol'],)->first());
 
-          return redirect()->action([UsuarioController::class, 'index'])->with('mensaje','Se agrego correctamente');
+          return redirect()->action([UserController::class, 'index'])->with('mensaje','Se agrego correctamente');
     }
 
     /**
@@ -101,6 +106,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->action([UsuarioController::class, 'index'])->with('mensaje','Se elimino correctamente');
+        return redirect()->action([UserController::class, 'index'])->with('mensaje','Se elimino correctamente');
     }
 }

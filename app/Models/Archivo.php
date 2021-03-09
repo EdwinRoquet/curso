@@ -10,7 +10,9 @@ class Archivo extends Model
     use HasFactory;
 
     protected $fillable = [
+        'folio',
         'uuid',
+        'slug',
         'activa',
         'curso_id',
         'user_id',
@@ -30,4 +32,10 @@ class Archivo extends Model
      {
          return $this->belongsTo(Curso::class, 'curso_id');
      }
+
+     public function getRouteKeyName()
+     {
+         return 'slug';
+     }
+
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\ExamController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ArchivoController;
 use App\Http\Controllers\MiCursoController;
 use App\Http\Controllers\QuestionController;
@@ -21,17 +22,19 @@ use App\Http\Controllers\QuestionController;
 |
 */
 
-Route::get('/', function () {
-    return view('inicio');
-});
-
-// Route::get('/mi-curso/user/{miCurso}', function () {
-//     return "hola mundo";
+// Route::get('/', function () {
+//     return view('inicio');
 // });
+Route::get('/', [InicioController::class, 'index'])->name('inicio');
+
+
+
+
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/constancia/user/{archivo}', [MiCursoController::class, 'show'] )->name('micurso.show');
 
 
 Route::group(['middleware' => ['auth']], function () {
@@ -51,22 +54,22 @@ Route::delete('/cursos/{curso}', [CursoController::class, 'destroy'])->name('cur
 
 Route::get('/activacion', [ArchivoController::class, 'index'])->name('activacion.index');
 Route::get('/activacion/{archivo}', [ArchivoController::class, 'show'])->name('activacion.show');
-Route::post('/activacion', [ArchivoController::class, 'store'])->name('activacion.store');
+//Ruta para cambiar estado
+Route::post('/activacion/create', [ArchivoController::class, 'store'])->name('activacion.store');
+Route::get('/activacion/{archivo}/edit', [ArchivoController::class, 'edit'])->name('activacion.edit');
+Route::put('/activacion/update', [ArchivoController::class, 'update'])->name('activacion.update');
+Route::delete('/activacion/{archivo}', [ArchivoController::class, 'destroy'])->name('activacion.destroy');
+Route::post('/activacion/{archivo}', [ArchivoController::class,'estado'])->name('activacion.estado');
+
 
 //Ruta para cursos de un solo usuario
 Route::get('/usuario/{user}/edit', [UserController::class, 'edit'])->name('usuario.edit');
 //Ruta para cursos de un solo usuario
 Route::get('/curso/exam/{curso}', [CursoController::class, 'curso'])->name('exam.usuario');
-//Ruta para cambiar estado
-Route::post('/activacion/{archivo}', [ArchivoController::class,'estado'])->name('activacion.estado');
-
-Route::get('/activacion/{archivo}/edit', [ArchivoController::class, 'edit'])->name('activacion.edit');
-Route::put('/activacion/', [ArchivoController::class, 'update'])->name('activacion.update');
-Route::delete('/activacion/{archivo}', [ArchivoController::class, 'destroy'])->name('activacion.destroy');
 
 //Ruta para que los usarios puedan ver sus constancias
 Route::get('/mi-curso', [MiCursoController::class, 'index'])->name('mi-curso.index');
-Route::get('/micurso/user/{archivo}', [MiCursoController::class, 'show'] )->name('micurso.show');
+
 
 //Modulo de Preguntas
 Route::get('/question', [QuestionController::class, 'index'])->name('question.index');

@@ -15,8 +15,10 @@ class CreateArchivosTable extends Migration
     {
         Schema::create('archivos', function (Blueprint $table) {
             $table->id();
+            $table->string('folio');
             $table->uuid('uuid');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('slug')->unique();
             $table->foreignId('curso_id')->constrained()->onDelete('cascade');
             $table->boolean('activa')->default(true);
             $table->string('ruta_temario')->nullable();

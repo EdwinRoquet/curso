@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,12 +17,14 @@
 <!--// css -->
 <!-- font-awesome icons -->
 <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
+<link href="{{ asset('css/wsp.css') }}" rel="stylesheet">
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 <!-- //font -->
 <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 	<!-- w3-banner -->
@@ -56,7 +60,7 @@
 								<span class="icon-bar"></span>
 							  </button>
 								 <div class="navbar-brand logo ">
-									<h1><a href=" ">CASEIPA</a></h1>
+									<h1><a href="{{route('inicio')}} ">CASEIPA</a></h1>
 								</div>
 
 							</div>
@@ -64,9 +68,9 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							 <ul class="nav navbar-nav link-effect-4">
-								<li class="active first-list"><a href="index.html">Inicio</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li class="active first-list"><a href="{{route('inicio')}}">Inicio</a></li>
+								{{-- <li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li> --}}
 							</ul>
 							</div><!-- /.navbar-collapse -->
 						</div>
@@ -102,7 +106,7 @@
 								<li>
 									<div class="slider-info">
 										<h3>Constancias DC3</h3>
-										<p>Curabitur eget metus eget erat vehicula semper vitae sed leo</p>
+										<p>Somos una empresa Capacitadora, que brinda asesoría y formación</p>
 										{{-- <div class="more-button">
 											<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
 										</div> --}}
@@ -111,7 +115,7 @@
 								<li>
 									<div class="slider-info">
 										<h3>Diplomas</h3>
-										<p>Quisque nisl risus, egestas in convallis vitae, fringilla cursus magna</p>
+										<p>Somos profesional en el Sector industrial y Empresarial</p>
 										{{-- <div class="more-button">
 											<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
 										</div> --}}
@@ -120,7 +124,7 @@
 								<li>
 									<div class="slider-info">
 										<h3>Qr verificacion</h3>
-										<p> Suspendisse bibendum dictum metus, at finibus elit dignissim nec	</p>
+										<p> Registrados ante STPS	</p>
 										{{-- <div class="more-button">
 											<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
 										</div> --}}
@@ -176,8 +180,8 @@
 							<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 						</div>
 						<div class="agileits-services-info">
-							<h4>Certificado DC3 </h4>
-							<p>Certificado digital o fisico con codigo Qr. </p>
+							<h4>Constancia DC3 </h4>
+							<p>Constancia digital o fisico con codigo Qr. </p>
 						</div>
 					</div>
 				</div>
@@ -243,175 +247,103 @@
 				<div class="clearfix"></div>
 			</div>
 			<!-- Progressive-Effects-Animation-JavaScript -->
-			<script type="text/javascript" src="{{asset('js/numscroller-1.0.js') }}"></script>
+			{{-- <script type="text/javascript" src="{{asset('js/numscroller-1.0.js') }}"></script> --}}
 			<!-- //Progressive-Effects-Animation-JavaScript -->
 		</div>
 	</div>
 	<!-- //Stats -->
 	<!-- welcome -->
+
 	<div class="welcome">
 		<div class="container">
-			<h3 class="agileits-title">Cursos  DC3</h3>
+			<h3 class="agileits-title">Constancias DC3</h3>
 			<div class="welcomerow-agileinfo">
-				<h5>Constancia de cursos</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis pharetra turpis, a scelerisque enim venenatis luctus. Cras blandit dolor a facilisis tincidunt. Vivamus sed orci aliquam, aliquet tellus ut, ornare nunc. Praesent lacinia elit id libero pulvinar, sit amet faucibus felis ornare. Pellentesque nulla lorem, pretium vel bibendum in, elementum id urna. Sed interdum interdum accumsan. Aenean nec purus ac orci finibus facilisis. In sit amet placerat nisl, in auctor sapien.</p>
+				<h5>Trabajamos para darte el mejor material educativo</h5>
+				<p>Constancias con codigo qr para verificacion  de la autencidad con nuestra agencia</p>
 			</div>
 			<div class="w3-welcome-grids">
-				<div class="col-md-3 col-xs-6 w3l-welcome-grid">
-					<img src="{{ asset('images/g1.jpg') }}" alt=" " class="img-responsive"/>
-					<div class="agileits-welcome-info">
-						<h4>Vaesent purus</h4>
-						<p>Donec non nibh in dui sagittis finibus. Duis suscipit arcu vel rhoncus molestie eget placerat mauris. </p>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6 w3l-welcome-grid">
-					<img src="{{ asset('images/g2.jpg') }}" alt=" " class="img-responsive"/>
-					<div class="agileits-welcome-info">
-						<h4>Suscipit duis </h4>
-						<p>Nibh in dui sagittis donec non finibus. Duis suscipit arcu vel rhoncus molestie eget placerat mauris. </p>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6 w3l-welcome-grid">
-					<img src="{{ asset('images/g3.jpg') }}" alt=" " class="img-responsive"/>
-					<div class="agileits-welcome-info">
-						<h4>Tempor purus</h4>
-						<p>Sagittis donec non nibh in dui finibus. Duis suscipit arcu vel rhoncus molestie eget placerat mauris. </p>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6 w3l-welcome-grid">
-					<img src="{{ asset('images/g4.jpg') }}" alt=" " class="img-responsive"/>
-					<div class="agileits-welcome-info">
-						<h4>Praesent tempor</h4>
-						<p>Arcu vel donec non nibh in dui sagittis finibus. Duis suscipit rhoncus molestie eget placerat mauris. </p>
-					</div>
-				</div>
+
+                @foreach($cursos as $key => $curso)
+
+                    <div class="col-md-3 col-xs-6 w3l-welcome-grid">
+				    	<img src="{{ asset("storage/$curso->ruta_imagen") }}" alt=" " class="img-responsive"/>
+				    	<div class="agileits-welcome-info">
+				    		<h4>{{$curso->nombre}}</h4>
+				    		<p>
+                            {{Str::limit($curso->descripcion, 96, "...")}}
+                           </p>
+				    	</div>
+				    </div>
+
+                @endforeach
+
+
+
+
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
+
+
+
 	<!-- //welcome -->
 	<!-- subscribe -->
-	<div class="subscribe jarallax">
-		<div class="container">
-			<div class="agileits-title title2">
-				<h3 class="agileits-title sub">Subscribe</h3>
-			</div>
-			<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit sed quia non numquam eius.</p>
-			<form action="#" method="post">
-				<input type="email" name="email" placeholder="Email Address" class="user" required="">
-				<input type="submit" value="Subscribe">
-			</form>
-		</div>
-	</div>
+
 	<!-- //subscribe -->
 
 	<!-- testimonial -->
-	<div class="testimonial agileits-w3layouts">
-		<div class="container">
-			<h3 class="agileits-title">Testimonials</h3>
-			<div class="sap_tabs">
-				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-					<ul class="resp-tabs-list">
-						<li class="resp-tab-item"><img src="{{ asset('images/1.png') }}" alt=""/></li>
-						<li class="resp-tab-item"><img src="{{ asset('images/2.png') }}" alt=""/></li>
-						<li class="resp-tab-item"><img src="{{ asset('images/3.png') }}" alt=""/></li>
-						<li class="resp-tab-item"><img src="{{ asset('images/4.png') }}" alt=""/></li>
 
-					</ul>
-					<div class="resp-tabs-container">
-						<div class="tab-1 resp-tab-content">
-							<div class="view view-first">
-								<p>Donec libero dui, scelerisque ac augue id, tristique ullamcorper elit. Nam ultrices, lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapien diam ac nibh convallis.</p>
-								<h5>Filan Isteku</h5>
-							</div>
-						</div>
-						<div class="tab-1 resp-tab-content">
-							<div class="view view-first">
-								<p>Scelerisque ac augue id Donec libero dui, tristique ullamcorper elit. Nam ultrices, lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapien diam ac nibh convallis.</p>
-								<h5>Ullam Firose </h5>
-							</div>
-						</div>
-						<div class="tab-1 resp-tab-content">
-							<div class="view view-first">
-								<p>Nam ultrices lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapientristique Donec libero dui, scelerisque ac augue id,  ullamcorper elit,diam ac nibh convallis.</p>
-								<h5>Sque Augue</h5>
-							</div>
-						</div>
-						<div class="tab-1 resp-tab-content">
-							<div class="view view-first">
-								<p>Nam ultrices lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapientristique Donec libero dui, scelerisque ac augue id,  ullamcorper elit,diam ac nibh convallis.</p>
-								<h5>Metus Ipsum</h5>
-							</div>
-						</div>
-
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- //testimonial -->
 
 	<!-- footer -->
 		<div class="agileits-w3layouts-footer">
 			<div class="container">
 				<div class="col-md-4 w3-agile-grid">
-					<h5>About Us</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum urna non nisi ornare, condimentum iaculis ipsum blandit. Duis auctor vulputate metus nec luctus.</p>
+					<h5>Sobre nosotros</h5>
+					<p>Nos ocupamos por tu seguridad y la de tu empresa,
+                        nos especializamos en la capacitación en seguridad industrial,
+                         sustentada por las normas oficiales mexicanas(NOM),
+                          ultilizando el mejor material didactico para el autoaprendizaje.</p>
 					<div class="footer-agileinfo-social">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							<li><a href="#"><i class="fa fa-vk"></i></a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-4 w3-agile-grid">
-					<h5>Recent Posts</h5>
+					<h5>Cursos Recientes</h5>
 					<div class="w3ls-post-grids">
-						<div class="w3ls-post-grid">
+
+                        @foreach($ultimosCursos as $key => $ultimosCurso)
+
+                        <div class="w3ls-post-grid">
 							<div class="w3ls-post-img">
-								<a href="#"><img src="{{ asset('images/g1.jpg') }}" alt="" /></a>
+								<a href="#"><img src="{{ asset("storage/$ultimosCurso->ruta_imagen") }}" alt="" /></a>
 							</div>
 							<div class="w3ls-post-info">
-								<h6><a href="#" data-toggle="modal" data-target="#myModal">Donec vel sapien in erat</a></h6>
-								<p>Sept 24,2017</p>
+								<h6><a href="#" data-toggle="modal" data-target="#myModal">{{$ultimosCurso->nombre}}</a></h6>
+                                {{-- <p> {{Str::limit($curso->descripcion, 25, '...') }} </p> --}}
 							</div>
 							<div class="clearfix"> </div>
 						</div>
-						<div class="w3ls-post-grid">
-							<div class="w3ls-post-img">
-								<a href="#"><img src="{{ asset('images/g4.jpg') }}" alt="" /></a>
-							</div>
-							<div class="w3ls-post-info">
-								<h6><a href="#" data-toggle="modal" data-target="#myModal">Donec vel sapien in erat</a></h6>
-								<p>Oct 25,2017</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="w3ls-post-grid">
-							<div class="w3ls-post-img">
-								<a href="#"><img src="{{ asset('images/g6.jpg') }}" alt="" /></a>
-							</div>
-							<div class="w3ls-post-info">
-								<h6><a href="#" data-toggle="modal" data-target="#myModal">Donec vel sapien in erat</a></h6>
-								<p>Nov 06,2017</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
+
+                        @endforeach
+
+
+
 					</div>
 				</div>
 				<div class="col-md-4 w3-agile-grid">
-					<h5>Address</h5>
+					<h5>Dirección</h5>
 					<div class="w3-address">
 						<div class="w3-address-grid">
 							<div class="w3-address-left">
 								<i class="fa fa-phone" aria-hidden="true"></i>
 							</div>
 							<div class="w3-address-right">
-								<h6>Phone Number</h6>
-								<p>+1 234 567 8901</p>
+								<h6>Numero de Telefono</h6>
+								<p>+52 921 200 79 14</p>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -420,12 +352,12 @@
 								<i class="fa fa-envelope" aria-hidden="true"></i>
 							</div>
 							<div class="w3-address-right">
-								<h6>Email Address</h6>
+								<h6>Email</h6>
 								<p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
-						<div class="w3-address-grid">
+						{{-- <div class="w3-address-grid">
 							<div class="w3-address-left">
 								<i class="fa fa-map-marker" aria-hidden="true"></i>
 							</div>
@@ -436,7 +368,7 @@
 								</p>
 							</div>
 							<div class="clearfix"> </div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -448,28 +380,30 @@
 			</div>
 		</div>
 	<!-- //footer -->
-	<!-- ResponsiveTabs -->
-	<script src="{{asset('js/easyResponsiveTabs.js') }}" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#horizontalTab').easyResponsiveTabs({
-				type: 'default', //Types: default, vertical, accordion
-				width: 'auto', //auto or any width like 600px
-				fit: true   // 100% fit in a container
-			});
-		});
-	</script>
-	<!-- //ResponsiveTabs -->
 
-	<script src="{{asset('js/jarallax.js') }}"></script>
-	<script src="{{asset('js/SmoothScroll.min.js') }}"></script>
-	<script type="text/javascript">
-		/* init Jarallax */
-		$('.jarallax').jarallax({
-			speed: 0.5,
-			imgWidth: 1366,
-			imgHeight: 768
-		})
-	</script>
+
+    <a href="https://api.whatsapp.com/send?phone=+529212007914&text=Hola,%20me%20encuentro%20interesado%20en%20los%20siguientes%20cursos%20&%20deseo%20saber%20m%C3%A1s%20informaci%C3%B3n%20al%20respecto." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+     </a>
+     <style>
+         .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: none;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  }
+  a {
+    color: initial;
+    &:hover {
+      text-decoration: initial;
+    }
+  }
+  .text-muted i {
+    margin: 0 10px;
+  }
+}
+
+     </style>
 </body>
 </html>

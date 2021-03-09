@@ -11,6 +11,7 @@ class Curso extends Model
 
     protected $fillable = [
         'nombre',
+        'img_tem',
         'descripcion',
         'ruta_imagen',
         'temario'
@@ -20,7 +21,7 @@ class Curso extends Model
        // Relación 1:n
        public function curso()
        {
-           return $this->hasMany(Archivo::class);
+           return $this->hasMany(Archivo::class, 'curso_id');
        }
 
        public function examen()

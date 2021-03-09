@@ -81,7 +81,7 @@ class Uiapp {
                  <li>Numero de preguntas: ${numPreguntas}</li>
                </ul>
 
-             <button class="btn btn-primary text-center" onclick="location.reload();">Volver</button>
+
 
         `;
 

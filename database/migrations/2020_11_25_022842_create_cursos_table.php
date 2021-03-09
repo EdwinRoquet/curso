@@ -18,6 +18,7 @@ class CreateCursosTable extends Migration
             $table->string('nombre');
             $table->text('temario')->nullable();
             $table->string('descripcion')->nullable();
+            $table->string('img_tem')->nullable();
             $table->string('ruta_imagen');
             $table->timestamps();
         });

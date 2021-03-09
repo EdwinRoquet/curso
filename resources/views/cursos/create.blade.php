@@ -88,9 +88,23 @@
 
               <div class="form-group">
                   <label for="imagen">Imagen: </label>
-                  <input id="imagen" class="form-control-file  @error('imagen') is-invalid @enderror" type="file" name="imagen" value="{{old('descripcion')}}">
+                  <input id="imagen" class="form-control-file  @error('imagen') is-invalid @enderror" type="file" name="imagen" value="{{old('imagen')}}">
 
                   @error('imagen')
+
+                         <div class="invalid-feedback">
+                             {{$message}}
+                         </div>
+
+                    @enderror
+
+              </div>
+
+              <div class="form-group">
+                  <label for="imagen2">Imagen del Temario: </label>
+                  <input id="imagen2" class="form-control-file  @error('imagen2') is-invalid @enderror" type="file" name="imagen2" value="{{old('imagen2')}}">
+
+                  @error('imagen2')
 
                          <div class="invalid-feedback">
                              {{$message}}

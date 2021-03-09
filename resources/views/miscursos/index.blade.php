@@ -55,7 +55,7 @@
                             <td >
 
                                 @if($cur->curso->examen->activa  == 0)
-                                <a href="{{ route('exam.show', ['exam'=>$cur->curso->examen->id ])}}" class="btn btn-block bg-gradient-secondary btn-lg linkExamen">Realizar Examen </a>
+                                <a href="{{ route('exam.show', ['exam'=>$cur->curso->examen->id ])}}" class="btn text-white btn-block bg-gradient-warning linkExamen"> Examen </a>
 
 
                                 @else
@@ -105,7 +105,7 @@
 
                             </td>
                             <td>
-                                <a class="btn btn-primary text-white" href="{{ route('micurso.show', ['archivo' => $cur->id])  }}">Ver</a>
+                                <a class="btn btn-primary text-white" href="{{ route('micurso.show', ['archivo' => $cur->slug])  }}">Ver</a>
                             </td>
 
                         </tr>

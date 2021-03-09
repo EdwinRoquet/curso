@@ -52,7 +52,7 @@
                             <td>{{$usuario->name}}</td>
                             <td>{{$usuario->cursos->count() }}</td>
                             <td>
-                                <a href="{{ route('usuario.edit',['user'=> $usuario->id ])}}" class="btn btn-primary"> Detalles</a>
+                                <a href="{{ route('usuario.edit',['user'=> $usuario->slug ])}}" class="btn btn-primary"> Detalles</a>
                             </td>
 
                         </tr>
@@ -85,8 +85,9 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-    <form action="{{route('activacion.store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('activacion.store')}}" method="POST">
         @csrf
+
           <div class="modal-body">
 
             <div class="form-group">
@@ -96,7 +97,7 @@
                <select id="usuario" class="form-control" name="usuario">
                    <option > -Seleciona a un usuario- </option>
                       @foreach($usuarios as $key => $usuario)
-                         <option value="{{ $usuario->id  }}" {{old('usuario') == $usuario->id ? 'selected' : ''}}> {{ $usuario->name  }} </option>
+                         <option value="{{ $usuario->id }}" {{old('usuario') == $usuario->id ? 'selected' : ''}}> {{ $usuario->name  }} </option>
                       @endforeach
 
                       @error('usuario')

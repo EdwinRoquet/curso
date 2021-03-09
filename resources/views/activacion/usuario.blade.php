@@ -29,7 +29,7 @@
         <div class="card-body">
 
             Nombre:  <h3> {{$usuario->name}}</h3>
-            Folio:
+
 
 
 
@@ -45,6 +45,7 @@
                 <thead>
                   <tr>
                     <th>Nombre Curso</th>
+                    <th>Folio</th>
                     <th>Estado</th>
                     <th>QR</th>
                     <th>Diploma</th>
@@ -63,11 +64,15 @@
                                     {{$cur->curso->nombre}}
                                 </td>
                                 <td>
+                                    {{$cur->folio}}
+                                </td>
+                                <td>
                                   <button  class=" bnt-estado text-white btn  @if($cur->activa == 1) btn-success @else btn-danger @endif" id="bnt-estado" idconstancia="{{$cur->id}}" estado="{{$cur->activa}}" type="button" > @if($cur->activa == 1) Activo @else Desactivado @endif </button>
                                 </td>
                                 <td>
-                                     @if($cur->ruta_qr === ' ')
-                                       <img class="img-fluid" src="storage/{{$cur->ruta_qr}}" alt="">
+                                     @if($cur->ruta_qr)
+                                       <img class="img-fluid" src="{{asset('storage/qrcodes/'.$cur->ruta_qr)}}" alt="">
+                                       <a href="{{asset('storage/qrcodes/'.$cur->ruta_qr)}}" download="qr-link.png"> Descargar</a>
                                      @else
                                           No hay nada
                                      @endif
@@ -106,7 +111,7 @@
                                           Archivos
                                         </button>
 
-                                     <form action="{{route('activacion.destroy',['archivo'=> $cur->id])}}" method="POST">
+                                     <form action="{{route('activacion.destroy',['archivo'=> $cur->slug])}}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger  text-white" type="submit"><i class="fas fa-trash-alt"></i></button>
